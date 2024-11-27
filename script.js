@@ -226,30 +226,36 @@ ScrollReveal().reveal('.about-content,.skills', { origin: "right" });
 ScrollReveal().reveal('.allServices,.portfolio-gallery,.blog-box,footer,.img-hero', { origin: "bottom" });
 
 
-// Agregar al final del archivo
-document.getElementById('contactForm').addEventListener('submit', async function(e) {
-    e.preventDefault();
+// Reemplaza la función existente del formulario con esta
+function handleSubmit(event) {
+    event.preventDefault(); // Detiene la redirección
     
-    const formData = new FormData(this);
+    const form = document.getElementById('contactForm');
+    const formData = new FormData(form);
     const queryString = new URLSearchParams(formData).toString();
+    const url = 'https://magicloops.dev/api/loop/85e914fa-ac16-4762-80c3-6af2b340433c/run';
     
-    try {
-        const response = await fetch(`${this.action}?${queryString}`, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
-        
-        if (response.ok) {
-            alert('Mensaje enviado con éxito');
-            this.reset();
-        } else {
-            alert('Error al enviar el mensaje');
-        }
-    } catch (error) {
-        alert('Error al enviar el mensaje');
+    // Deshabilitar el botón
+    const submitButton = form.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+    
+    // Enviar en segundo plano
+    fetch(`${url}?${queryString}`, {
+        method: 'GET',
+        mode: 'no-cors' // Esto evita problemas de CORS
+    })
+    .then(() => {
+        alert('¡Mensaje enviado con éxito!');
+        form.reset();
+    })
+    .catch(error => {
         console.error('Error:', error);
-    }
-});
+        alert('Error al enviar el mensaje');
+    })
+    .finally(() => {
+        submitButton.disabled = false;
+    });
+    
+    return false; // Asegura que no haya redirección
+}
 
