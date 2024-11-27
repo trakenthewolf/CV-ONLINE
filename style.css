@@ -147,6 +147,9 @@ section{
     align-items: center;
     grid-gap: 4em;
     background: var(--gradient-white-bg2);
+    opacity: 1;
+    transform: none;
+    visibility: visible;
 }
 
 .hero-info{
@@ -292,30 +295,60 @@ section{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    gap: 50px;
+    padding: 90px 8%;
+    background: #000;
+    position: relative;
+    z-index: 1;
 }
 
 .about .about-img{
     position: relative;
+    width: 40%;
+    padding: 20px;
+    background-color: black;
+    overflow: hidden;
 }
 
 .about .about-img .aboutHero{
-    width: 40vw;
+    width: 100%;
     height: auto;
+    border-radius: 20px;
+    filter: brightness(100%) contrast(105%) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+    transition: all 0.3s ease;
+    object-fit: cover;
+}
+
+.about-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--bg-color);
+    z-index: -1;
 }
 
 .about-img .ring{
     position: absolute;
     top: 22%;
-    right: 1%;
+    right: -15%;
+    width: 120px;
+    opacity: 0.6;
+    filter: drop-shadow(0 0 8px rgba(196, 164, 132, 0.3));
+    mix-blend-mode: soft-light;
 }
 
 .about-img .circle{
     position: absolute;
-    top: 0%;
-    left: 0%;
+    top: 0;
+    left: -15%;
+    width: 120px;
+    opacity: 0.6;
+    filter: drop-shadow(0 0 8px rgba(196, 164, 132, 0.3));
+    mix-blend-mode: soft-light;
 }
-
 
 .about-content{
     padding: 3rem 0;
@@ -1077,6 +1110,10 @@ footer{
     .fillter-buttons button{
         padding: 10px;
         font-size: .8rem;
+    }
+    .about .about-img {
+        width: 100%;
+        padding: 10px;
     }
 }
 
