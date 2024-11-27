@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pars Coder || Portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- boxicon css link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+<body>
+    <div class="overlay"></div>
+    <header>
+        <a href="#" class="logo"><span>M</span>aximiliano</a>
+        <ul class="navlist">
+            <li><a href="#home" class="active">Inicio</a></li>
+            <li><a href="#about">Curriculum</a></li>
+            <li><a href="#portfolio">Sobre Mi</a></li>
+            <li><a href="#contact">Contactame</a></li>
+        </ul>
+        <div class="right-header">
+            <a href="#" class="btn">Conversar<i class='bx bx-message-dots' ></i></a>
+            <div class="menu-icon">
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="hero-info">
+            <h3>Bienvenido a mi Perfil</h3>
+            <h1>FERRERIA MAXIMILIANO</h1>
+
+            <div class="text-animate">
+                <h2>ADMINISTRADOR / ATENCIÓN AL PÚBLICO</h2>
+            </div>
+
+            <p>Como líder, me esfuerzo por establecer metas claras, proporcionar orientación y apoyo a mi equipo,
+            y fomentar un clima de confianza mutua.</p>
+
+            <div class="btn-box">
+                <a href="#contact" class="btn">Contactar <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+
+            <div class="social-media">
+                <div class="bg-icon">
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <span></span>
+                </div>
+                <div class="bg-icon">
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="img-hero">
+            <img src="img/hero.png" alt="">
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="img/aboutMe.png" alt="" class="aboutHero">
+            <div class="showcase-ring">
+                <img src="shapes/ring.png" class="ring">
+                <img src="shapes/circle.png" class="circle">
+            </div>
+        </div>
+        <div class="about-content">
+            <h2 class="heading">Información Relevante</h2>
+            <div class="about-btn">
+                <button onclick="showTab(0)" class="tab-btn active">Educación</button>
+                <button onclick="showTab(1)" class="tab-btn">Experiencia</button>
+            </div>
+            <div class="content-btn">
+                <div class="tab-content" style="display: block;">
+                    <div class="text-box">
+                        <p>Instituto Padre Valentin Bonetti</p>
+                        <span>Ciencias Naturales - 2014</span>
+                        <span>Recibido sin adeudar materias</span>
+                    </div>
+
+                    <div class="text-box">
+                        <p>Curso de uso de sistemas Informáticos Software</p>
+                        <span>A2 Capacitación de Excel</span>
+                        <span>Nivel inicial - Intermedio</span>
+                        <span>Uso de .XLSX</span>
+                    </div>
+
+                    <div class="text-box">
+                        <p>Instituto I11</p>
+                        <span>Curso de Liderazgo y Manejo de Grupos</span>
+                    </div>
+
+                    <div class="text-box">
+                        <p>Hola Mundo</p>
+                        <span>Curso de Programación</span>
+                    </div>
+                </div>
+
+                <div class="tab-content" style="display: none;">
+                    <div class="text-box">
+                        <p>APART. GREEN HOTEL - Actual</p>
+                        <span>Administración</span>
+                        <ul>
+                            <li>Compras de Insumo para el hotel</li>
+                            <li>Administración de horarios del personal</li>
+                            <li>Contacto con huéspedes</li>
+                        </ul>
+                    </div>
+
+                    <div class="text-box">
+                        <p>BARLATINA - CAJERO ENCARGADO - SISTEMA FUDO</p>
+                        <span>2022-2023</span>
+                        <ul>
+                            <li>Apertura y cierre de caja</li>
+                            <li>Implemente estrategias para mejorar la eficiencia en tiempos de espera</li>
+                            <li>Coordiné con otros departamentos para asegurar un flujo de trabajo eficiente</li>
+                            <li>Control de cajas diarias y facturación diaria</li>
+                            <li>Realicé auditorías internas para asegurar el cumplimiento de políticas internas</li>
+                        </ul>
+                    </div>
+
+                    <div class="text-box">
+                        <p>FARO BISTRO / TOWER BAR - ENCARGADO - SIST. MAXI RES</p>
+                        <span>Actual</span>
+                        <ul>
+                            <li>Manejo de Equipo (10 pax)</li>
+                            <li>Control de caja Diaria</li>
+                            <li>Auditorias Diarias para asegurar el cumplimiento de políticas internas</li>
+                            <li>Reportes diarios</li>
+                            <li>Uso de sistemas informáticos, excel entre otros</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="cvContent">
+                <a href="img/resume.pdf" target="_blank" class="btn d-CV">Download CV <i class='bx bx-download'></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <div class="main-text">
+            <h2 class="heading">Más Sobre Mi</h2>
+            <span>Proyectos y Servicios</span>
+        </div>
+
+        <div class="portfolio-gallery">
+            <div class="portfolio-box mix codemach">
+                <div class="portfolio-content">
+                    <h3>Code Mach</h3>
+                    <p>Empresa de desarrollo de software y soluciones tecnológicas innovadoras.</p>
+                    <a href="" class="readMore">Ver Más</a>
+                </div>
+                <div class="portfolio-img">
+                    <img src="img/portfolio/7.png" alt="">
+                </div>
+            </div>
+
+            <div class="portfolio-box mix web">
+                <div class="portfolio-content">
+                    <h3>Diseño Web</h3>
+                    <p>Desarrollo de sitios web profesionales y personalizados para empresas y particulares.</p>
+                    <a href="#" class="readMore">Ver Más</a>
+                </div>
+                <div class="portfolio-img">
+                    <img src="img/portfolio/1.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="portfolio-box mix gestoria">
+                <div class="portfolio-content">
+                    <h3>Gestoría</h3>
+                    <p>Gestión administrativa, trámites empresariales y asesoramiento personalizado.</p>
+                    <a href="#" class="readMore">Ver Más</a>
+                </div>
+                <div class="portfolio-img">
+                    <img src="img/portfolio/2.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="portfolio-box mix auditoria">
+                <div class="portfolio-content">
+                    <h3>Auditorías</h3>
+                    <p>Auditorías internas, control de procesos y optimización de recursos.</p>
+                    <a href="#" class="readMore">Ver Más</a>
+                </div>
+                <div class="portfolio-img">
+                    <img src="img/portfolio/3.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="down-box" id="contact">
+        <div class="contactSkills">
+            <div class="contact-info">
+                <div class="main-text">
+                    <h2 class="heading">Contactame</h2>
+                    <span>Ponte en contacto conmigo</span>
+                </div>
+                <form id="contactForm" action="https://magicloops.dev/api/loop/85e914fa-ac16-4762-80c3-6af2b340433c/run" method="GET">
+                    <div class="input-box">
+                        <input type="text" name="nombre" placeholder="Nombre" required>
+                        <input type="text" name="apellido" placeholder="Apellido" required>
+                    </div>
+                    <input type="email" name="email de remitente" placeholder="Email" required>
+                    <input type="text" name="asunto" placeholder="Asunto" required>
+                    <textarea name="mensaje" cols="30" rows="10" placeholder="Tu mensaje..."></textarea>
+                    <div class="formBtn">
+                        <button type="submit" class="btn">Enviar Mensaje</button>
+                    </div>
+                </form>
+            </div>
+            <div class="skills">
+                <div class="skillBox">
+                    <div class="main-text">
+                        <h2 class="heading">HABILIDADES</h2>
+                    </div>
+                    
+                    <div class="skills-list">
+                        <ul>
+                            <li><i class='bx bx-check-circle'></i> Inglés Básico (informático)</li>
+                            <li><i class='bx bx-check-circle'></i> Excelente manejo de software</li>
+                            <li><i class='bx bx-check-circle'></i> Manejo de Grupos</li>
+                            <li><i class='bx bx-check-circle'></i> Resolución de problemas</li>
+                            <li><i class='bx bx-check-circle'></i> Trabajo en equipo</li>
+                            <li><i class='bx bx-check-circle'></i> Tareas Administrativas</li>
+                            <li><i class='bx bx-check-circle'></i> Buena comunicación</li>
+                            <li><i class='bx bx-check-circle'></i> Buena presencia</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright © 2024 by <span>Pars Coder</span> || All Right Reservd.</p>
+    </footer>
+
+    <div id="progress">
+        <span id="progress-value">
+            <i class='bx bxs-chevrons-up' ></i>
+        </span>
+    </div>
+
+    <!-- scroll reveal  -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Swiper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- mixitup cdn js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
