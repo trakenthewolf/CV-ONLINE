@@ -232,17 +232,20 @@ document.getElementById('contactForm').addEventListener('submit', async function
     
     const formData = new FormData(this);
     const queryString = new URLSearchParams(formData).toString();
-    const url = `${this.action}?${queryString}`;
-
+    
     try {
-        const response = await fetch(url);
-        const data = await response.json();
+        const response = await fetch(`${this.action}?${queryString}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
         
         if (response.ok) {
             alert('Mensaje enviado con éxito');
             this.reset();
         } else {
-            alert('Error al enviar el mensaje: ' + data.message);
+            alert('Error al enviar el mensaje');
         }
     } catch (error) {
         alert('Error al enviar el mensaje');
